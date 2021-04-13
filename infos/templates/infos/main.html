@@ -26,16 +26,28 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/infos/">Home
+          <li class="nav-item">
+            {% if Title == "Homepage" %}
+              <a class="nav-link active" href="/">Home
+            {% else %}
+              <a class="nav-link" href="/">Home
+            {% endif %}
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/infos/me/">About me</a>
+            {% if Title == "About me" %}
+              <a class="nav-link active" href="/me">About me</a>
+            {% else %}
+              <a class="nav-link" href="/me/">About me</a>
+            {% endif %}
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/infos/contact/">Contact</a>
+            {% if Title == "Contact" %}
+              <a class="nav-link active" href="/contact/">Contact</a>
+            {% else %}
+              <a class="nav-link" href="/contact/">Contact</a>
+            {% endif %}
           </li>
         </ul>
       </div>
